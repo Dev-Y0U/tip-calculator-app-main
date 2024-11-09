@@ -13,9 +13,14 @@
 		/>
 
     <link
-     rel="stylesheet" 
-     href="style.css"
+    	rel="stylesheet" 
+    	href="style.css"
     />
+		
+		<script 
+			src="script.js"
+			defer
+		></script>
 
 		<title>Frontend Mentor | Tip calculator app</title>
 
@@ -35,7 +40,7 @@
 		<div class="card">
 			<div class="sec_left">
 				<p class="left_titles titles">Bill</p>
-				<input type="number" id="" value="142.55"/>
+				<input type="number" id="" placeholder="0" dir="rtl"/>
         <p class="left_titles titles">Select Tip %</p>
 				<div class="tips">
           <button type="button"><p>5%</p></button>
@@ -43,27 +48,29 @@
 					<button type="button"><p>15%</p></button>
 					<button type="button"><p>25%</p></button>
 					<button type="button"> <p>50%</p></button>
-          <button><input type="number" name="" id="" ><p class="custom">Custom</p></button>
+          <input type="number"  placeholder="custom" id="" ><!--<p class="custom">Custom</p>-->
 				</div>
         <p class="left_titles"> Number of People</p>
-        <input type="number" />
+        <input type="number" placeholder="0" dir="rtl"/>
 			</div>
 
       <div class="sec_right">
-        <div class="right_view">
-          <div class="tip_text">
-            <p>Tip Amount</p>
-            <p>/ person</p>
-          </div>
-          <div class="tip_value">00</div>
-        </div>
-        <div class="right_view">
-          <div class="tip_text">
-            <p>Total</p>
-            <p>/ person</p>
-          </div>
-          <div class="tip_value">00</div>
-        </div>
+				<div class="right_view">
+					<div class="tip_view">
+						<div class="tip_text">
+							<p>Tip Amount</p>
+							<p>/ person</p>
+						</div>
+						<div class="tip_value">$0.0</div>
+					</div>
+					<div class="tip_view">
+						<div class="tip_text">
+							<p>Total</p>
+							<p>/ person</p>
+						</div>
+						<div class="tip_value">$0.0</div>
+					</div>
+				</div>
         <button id="reset">Reset</button>
       </div>
 		</div>

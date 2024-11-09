@@ -1,4 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+:root{
+
+/* colors */
+--Strong_cyan: hsl(172, 67%, 45%);
+--Very_dark_cyan: hsl(183, 100%, 15%);
+--Dark_grayish_cyan: hsl(186, 14%, 43%);
+--Grayish_cyan: hsl(184, 14%, 56%);
+--Light_grayish_cyan: hsl(185, 41%, 84%);
+--Very_light_grayish_cyan: hsl(189, 41%, 97%);
+}
+
 body{
   background-color: hsl(185, 41%, 84%);
   font-family: "Space Mono", monospace;
@@ -24,7 +35,7 @@ body{
 @media (min-width:1440px) {
   .card{
     flex-direction: row;
-    /* max-width: 580px; */
+      align-items: normal;
   }
   .tips{
     grid-template-columns: repeat(3, 1fr) !important;
@@ -36,19 +47,41 @@ input{
   min-height: 48px;
   width: 100%;
 }
+
+.sec_left {
+  width: 100%;
+  padding: 15px;
+}
+.sec_left > input{
+  box-sizing: border-box;
+  cursor: pointer;
+  padding: 5px 10px;
+}
+.sec_left input:focus {
+  border-radius: 5px;
+  border-color:var(--Strong_cyan);
+  border-width: 4px;
+  border-style: solid;
+}
 .tips{
   display: grid;
   grid-template-columns: repeat(2,1fr);
-  gap:5px;
+  gap:10px;
 }
 .tips button{
   border-radius: 10px;
   color: white;
   border:0;
   font-size: 24px;
-    font-family: "Space Mono", monospace;
+  font-family: "Space Mono", monospace;
+  cursor: pointer;
   font-weight: 700;
   position: relative;
+}
+
+.tips button:not(:last-child):hover{
+  background-color:hsl(173, 61%, 77%);
+  color: var(--Very_dark_cyan);
 }
 .tips button:not(:last-child){
     background-color: hsl(183, 100%, 15%);
@@ -56,36 +89,46 @@ input{
 .tips button:last-child{
     background-color: hsl(189, 41%, 97%);
 }
-.tips .custom{
+.tips input::placeholder{
   color: hsl(186, 14%, 43%);
-  position: absolute;
-  top: 0%;
-  right: 25%;
-
-}
-.sec_left{
-  padding: 15px;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  
 }
 .sec_right{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background-color: hsl(183, 100%, 15%);
   color: white;
   border-radius: 15px;
-  padding: 15px;
+  padding: 20px ;
   width: 100%;
-  height: 100%;
+
 }
-.right_view{
+.tip_view{
   display:flex;
   justify-content: space-between;
+  padding-top: 15px;
 }
 .tip_value{
   font-size: 48px;
+  color: hsl(172, 67%, 45%);
 }
+/* .tip_text  { 
+  color: var(--Dark_grayish_cyan);
+} */
 #reset{
   background-color: hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
+  cursor: pointer;
   width: 100%;
   height: 48px  ;
   border:0;
   border-radius: 5px;
+}
+#reset:hover{
+  background-color: hsl(173, 61%, 77%);
 }
 
